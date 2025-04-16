@@ -2316,6 +2316,37 @@ blockquote {
 ===============================*/
 @media (max-width: 480px) {
 
+    .background-moc {
+        display: none;
+    }
+    .coffe-7, .coffe-7{
+        display: none;
+    }
+    .coffe-10 {
+        top: 9%;
+        left: -19%;
+    }
+    .coffe-11 {
+        top: 47%;
+    }
+    .coffe-4{
+        top: -6%;
+    }
+    .coffe-12{
+        top: 70%;
+        left: 7%;
+    }
+    .coffe-5{
+        left: 55%;
+    }
+    .coffe-15{
+        left: 11%;
+        top: 5%;
+    }
+    .coffe-13{
+        left: -14%;
+    }
+
     #wrapper {
         margin:0;
         padding:0;
