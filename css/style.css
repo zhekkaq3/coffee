@@ -106,6 +106,7 @@ figure {
 #wrapper {
     margin:0 15px;
     position: relative;
+    overflow: hidden;
 }
 
 
