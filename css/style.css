@@ -56,100 +56,6 @@ figure {
     margin: 0;
 }
 
-/* Page Border */
-
-.page-border {
-    position: fixed;
-    z-index: 999999;
-    pointer-events: none;
-}
-
-.page-border .bottom-border, .page-border .left-border, .page-border .right-border, .page-border .top-border {
-    background: #f3f3ef;
-    position: fixed;
-    z-index: 9999;
-}
-
-.page-border > .top-border, .page-border > .right-border, .page-border > .bottom-border, .page-border > .left-border {
-    padding: 11px;
-    background: #ccc;
-}
-
-.page-border .bottom-border, .page-border .top-border {
-    width: 100%;
-    padding: 10px;
-    left: 0;
-}
-
-.page-border .left-border, .page-border .right-border {
-    padding: 10px;
-    height: 100%;
-    top: 0;
-}
-
-.page-border .top-border {
-    top: 0;
-}
-
-.page-border .right-border {
-    right: 0;
-}
-
-.page-border .bottom-border {
-    bottom: 0;
-}
-
-.page-border .left-border {
-    left: 0;
-}
-
-#wrapper {
-    margin:0 15px;
-    position: relative;
-    overflow: hidden;
-}
-
-
-/* --------- 1.1 Input Elements ---------- */
-
-input, textarea {
-    border: 1px solid #e1e1e1;
-    padding: 10px;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    transition: all .3s linear;
-    border-radius: 3px;
-}
-
-input {
-    height: 40px;
-    margin: 3px 0;
-    outline: none;
-    line-height: normal;
-    font-size: 14px;
-}
-
-input[type="submit"] {
-    cursor: pointer;
-    border-style: solid;
-    border-width: 2px;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-select {
-    border: 1px solid #e1e1e1;
-    height: 40px;
-    padding: 5px;
-}
-
-input:focus, textarea:focus {
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-*:focus {
-    outline: none;
-}
 
 /*------------------------------------------------------------------------------------------*/
 /* 2. Layout Elements */
@@ -183,13 +89,6 @@ section {
 
 .big-padding-bottom {
     padding-bottom: 85px !important;
-}
-
-/* Targets all elements */
-
-[class*='col-'] {
-    float: left;
-    padding: 20px;
 }
 
 #clients .col-2-3 [class*='col-'] {
@@ -479,10 +378,6 @@ section {
 
 /*Navigation Solid*/
 
-#header.nav-solid [class*='col-'] {
-    padding: 0 20px;
-}
-
 #header.nav-solid {
     background: #fff;
     box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.2);
@@ -736,7 +631,7 @@ h6 {
 /* Section Headings */
 
 .section-heading {
-    padding: 30px 0 60px 0;
+    padding: 30px 0;
 }
 
 .section-subtitle {
@@ -756,225 +651,271 @@ h6 {
 /* 4. Banner */
 /*------------------------------------------------------------------------------------------*/
 
-#banner {
-    background-size: cover;
-}
-
-#banner-content {
-    display: flex;
+.content {
     position: relative;
-}
+    display: flex;
+    height: calc(100vh - 82px);
+    padding: 72px 0 0 0;
+    height: 100vh;
+  }
 
-#banner-content .background-header {
-    width: 40%;
-    margin-left: auto;
-    background: url("../images/background/backgraund.jpg") no-repeat right bottom;
-    height: calc(100vh - 160px);
-
-}
-
-.background-moc {
-    position: absolute;
-    top: 22%;
-    right: 15%;
-    background: url("../images/background/Coffee_Mug_Mockup-removebg-preview.png") no-repeat;
-    background-position: center;
+  .dividers {
+    display: inline-flex;
+    height: 1px;
+    width: 120px;
+    background-color: #000;
+    margin-left: 15px;
+  }
+  
+  .content__right {
+    position: relative;
+    width: 33%;
+    height: 100%;
+    background: url('../images/background/backgraund.jpg') no-repeat center center;
     background-size: cover;
-    width: 60%;
-    height: 80%;
-
-}
-
-.title-rotate {
+  }
+  
+  .title__rotate {
     color: white;
     transform: rotate(-90deg);
     position: absolute;
-    right: -193px;
-    top: 42%;
-    font-size: 71px;
+    right: -62%;
+    top: 40%;
+    font-size: 6rem;
     font-weight: 700;
-}
-
-.coffee {
+  }
+  
+  .coffee__moc {
+    position: absolute;
+    top: 15%;
+    right: 35%;
+    background: url("../images/background/Coffee_Mug_Mockup-removebg-preview.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 158%;
+    height: 96%;
+  }
+  
+  .content__left {
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 67%;
+    height: 100%;
+  }
+  
+  .content__left-small-title {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 3.9px;
+  }
+  
+  .content__left-title {
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -3px;
+  }
+  
+  .coffee {
     position: absolute;
     width: 160px;
     height: 160px;
-    z-index: 9999;
-}
-
-.coffe-1 {
-    background: url("../images/background/1.png") no-repeat;
+  }
+  
+  .coffe-1 {
+    background: url("../images/coffee/1.png") no-repeat;
     background-size: cover;
-    top: 38%;
-    left: 23%;
-}
-.coffe-2 {
-    background: url("../images/background/2.png") no-repeat;
+    top: 27%;
+    left: 17%;
+  }
+  .coffe-2 {
+    background: url("../images/coffee/2.png") no-repeat;
     background-size: cover;
-    width: 100px;
-    height: 100px;
-    top: 74%;
-    left: 88%;
-}
-.coffe-3 {
     width: 80px;
     height: 80px;
-    background: url("../images/background/3.png") no-repeat;
+    top: 82%;
+    left: 62%;
+    transform: rotate(80deg);
+  }
+  .coffe-3 {
+    width: 80px;
+    height: 80px;
+    background: url("../images/coffee/3.png") no-repeat;
     background-size: cover;
-    top: 10%;
-    left: 65%;
-}
-.coffe-4 {
-    background: url("../images/background/4.png") no-repeat;
+    top: 68%;
+    left: 58%;
+  }
+  .coffe-4 {
+    background: url("../images/coffee/4.png") no-repeat;
     background-size: cover;
-    top: 25%;
+    top: 75%;
     left: 26%;
-}
-.coffe-5 {
-    background: url("../images/background/5.png") no-repeat;
+  }
+  .coffe-5 {
+    background: url("../images/coffee/5.png") no-repeat;
     background-size: cover;
-    top: 74%;
-    left: 78%;
-}
-.coffe-6 {
-    background: url("../images/background/1.png") no-repeat;
+    top: 81%;
+    left: 6%;
+  }
+  .coffe-6 {
+    background: url("../images/coffee/1.png") no-repeat;
     background-size: cover;
-    top: 0%;
-    left: 78%;
-    height: 120px;
-    width: 120px;
-}
-.coffe-7 {
-    background: url("../images/background/2.png") no-repeat;
+    top: 22%;
+    left: 62%;
+    height: 100px;
+    width: 100px;
+  }
+  .coffe-7 {
+    background: url("../images/coffee/2.png") no-repeat;
     background-size: cover;
     top: 10%;
     left: 30%;
-    width: 100px;
-    height: 100px;
-}
-.coffe-8 {
-    background: url("../images/background/3.png") no-repeat;
+    width: 80px;
+    height: 80px;
+  }
+  .coffe-8 {
+    background: url("../images/coffee/3.png") no-repeat;
     background-size: cover;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     left: 48%;
     top: 23%;
     transform: rotate(87deg);
-}
-
-.coffe-9 {
-    background: url("../images/background/4.png") no-repeat;
+  }
+  
+  .coffe-9 {
+    background: url("../images/coffee/4.png") no-repeat;
     background-size: cover;
-    top: 58%;
-    left: 44%;
+    top: 19%;
+    left: 33%;
     transform: rotate(60deg);
-}
-.coffe-10 {
-    background: url("../images/background/5.png") no-repeat;
+  }
+  .coffe-10 {
+    background: url("../images/coffee/5.png") no-repeat;
     background-size: cover;
-    top: 17%;
-    left: 34%;
-}
-.coffe-11 {
-    background: url("../images/background/1.png") no-repeat;
+    top: 1%;
+    left: 77%;
+
+  }
+  .coffe-11 {
+    background: url("../images/coffee/1.png") no-repeat;
     background-size: cover;
-    top: 53%;
+    top: 7%;
     left: -5%;
     transform: rotate(65deg);
     width: 200px;
-}
-.coffe-12 {
-    background: url("../images/background/4.png") no-repeat;
+  }
+  .coffe-12 {
+    background: url("../images/coffee/4.png") no-repeat;
     background-size: cover;
     top: 35%;
     left: 36%;
     transform: rotate(120deg);
-}
-.coffe-13{
-    background: url("../images/background/4.png") no-repeat;
+  }
+  
+  @media (max-width: 768px){
+    .content{
+      flex-direction: column;
+    }
+  
+    .content__left{
+      width: 100%;
+    }
+  
+    .content__left-small-title {
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+    .divider{
+      margin: 0;
+    }
+  
+    .content__left-title {
+      font-size: 31px;
+      letter-spacing: 0px;
+      line-height: 1.4;
+      font-weight: 800;
+      text-align: center;
+    }
+  
+    .content__right{
+      width: 100%;
+    }
+  
+    .title__rotate {
+      position: relative;
+      transform: rotate(0deg);
+      top: 0;
+      right: 0;
+      text-align: center;
+      font-size: 52px;
+    }
+  
+    .coffee__moc{
+      top: 30%;
+      right: -20%;
+      width: 116%;
+      height: 96%;
+    }
+  
+    .coffe-7, .coffe-8, .coffe-9, .coffe-10, .coffe-11, .coffe-12, .coffe-2, .coffe-1 {
+      display: none;
+    }
+  }
+
+/* ABOUT-AS */
+.about__left {
+    height: 100%;
+    background: url('../images/background/about.jpg') no-repeat center center;
     background-size: cover;
-    top: 75%;
-    left: 26%;
-    transform: rotate(120deg);
-}
-
-.coffe-14{
-    background: url("../images/background/3.png") no-repeat;
-    background-size: cover;
-    top: 52%;
-    left: 87%;
-    width: 100px;
-    height: 100px;
-}
-.coffe-15 {
-    background: url("../images/background/2.png") no-repeat;
-    background-size: cover;
-    width: 100px;
-    height: 100px;
-    left: 17%;
-    top: 10%;
-}
-.coffe-16{
-    background: url("../images/background/1.png") no-repeat;
-    background-size: cover;
-    top: 12%;
-    left: 58%;
-}
-
-.coffe-17{
-    background: url("../images/background/5.png") no-repeat;
-    background-size: cover;
-    top: 35%;
-    left: -6%;
-}
-.coffe-18 {
-    background: url("../images/background/5.png") no-repeat;
-    background-size: cover;
-    top: 89%;
-    left: 62%;
-}
-
-#banner-content.row {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-#banner h1 {
-    padding-top: 5%;
-}
-
-#banner .section-heading:before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 5px;
-    margin-top: 30px;
-}
-
-.about-bg {
-    background: url("../images/background/about.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 50px 8px;
-}
-
-.about-title {
-    color: white!important;
-    font-size: 26px!important;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 26px;
-}
-
-.bg-chan {
-    background: url(../images/background/chayn.png) no-repeat;
-    background-size: contain;
-    background-position: right;
+    position: relative;
+    width: 35%;
+  }
+  
+  .about__right {
+    width: 65%;
+    padding: 20px 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about__right-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  
+  .about__right-text {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    max-width: 80%;
+  }
+  
+  .w {
+    max-width: 65%;
+  }
+  .about__right-bottom {
+    display: flex;
+  }
+  .about__right-bottom-img {
     position: absolute;
-    width: 50%;
-    height: 50%;
-    bottom: 78px;
-    right: 0;
-}
+    background: url('/images/background/chayn.png') no-repeat center center;
+    background-size: contain;
+    width: 33%;
+      height: 62%;
+      right: 0;
+      bottom: 0;
+  }
 
 
 
@@ -1149,10 +1090,112 @@ blockquote {
     font-size: 22px;
 }
 
+/* our-coffee */
+.our-coffee {
+    background-color: #ede6d9;
+    background-image: url('/images/background/Mask-Group-4.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    min-height: 900px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .q {  
+    width: 100%;
+    text-align: center;
+  }
+  
+  .our-coffee__item {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 30%;
+  }
+  
+  .our-coffee__img {
+    width: 66%;
+  }
+  
+  .our-coffee__title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+  
+  .our-coffee__text {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+    
+  }
+
+  .accordion {
+	width: 100%;
+    margin-top: 20px;
+}
+
+.accordion-item {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.accordion-header {
+	position: relative;
+	padding: 8px;
+	opacity: 0.8;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #444444;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+
+.accordion-content {
+	font-size: 11px;
+	line-height: 1.9;
+	padding: 15px;
+	display: none;
+    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-item.active .accordion-content {
+	display: block;
+}
+
+/* Стрелочка */
+.accordion-header::after {
+	content: '▼';
+	font-size: 14px;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: transform 0.4s ease;
+}
+
+/* Стрелочка при открытом аккордеоне */
+.accordion-item.active .accordion-header::after {
+	transform: translateY(-50%) rotate(180deg);
+}
+
 /* --------- 6.4 Gallery ---------- */
 
 #gallery img {
     max-height: 300px;
+    width: 100%;
+    object-fit: cover;
 }
 
 #gallery [class*='col-'] {
@@ -1448,180 +1491,36 @@ blockquote {
     }
 }
 
-/* --------- 6.5 Video ---------- */
-
-#video-box {
-    color:#fff;
-    position:relative;
-    overflow:hidden;
-    text-align:center;
-}
-
-.video_container, .easyContainer {
-    position: relative;
-    padding-bottom: 56.25%; /* 16/9 ratio */
-    margin: 0;
-    padding-top: 0; /* IE6 workaround*/
-    height: 0;
-    overflow: hidden;
-}
-
-.video_container iframe, .video_container object, .video_container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.slvj-lightbox iframe, .slvj-lightbox object, .slvj-lightbox embed {
-    width: 100% !important;
-    height: 529px !important;
-}
-
-.videojs-background-wrap {
-    overflow: hidden;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -998;
-}
-
-#slvj-window {
-    width: 100%;
-    min-height: 100%;
-    z-index: 9999999999;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-#slvj-window,
-#slvj-window * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-#slvj-background-close {
-    width: 100%;
-    min-height: 100%;
-    z-index: 31;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-#slvj-back-lightbox {
-    max-width: 940px;
-    max-height: 529px;
-    z-index: 32;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.slvj-lightbox {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    z-index: 53;
-}
-
-#slvj-close-icon:before {
-    font-family: "fontawesome";
-    color: #fff;
-    content: '\f00d';
-    font-size: 22px;
-    opacity: 0.5;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    z-index: 99999;
-    height: 22px;
-    width: 22px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-}
-
-#slvj-close-icon:before:hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
-/* --------- 6.6 Clients ---------- */
-
-#clients a {
-    display: block;
-    text-align: center;
-    position: relative;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
-}
-
-#clients img {
-    display: inline-block;
-    padding: 15px 25px;
-}
-
-.client-overlay {
-    background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-
-#clients a:hover .client-overlay {
-    opacity: 1;
-}
-
-.client-overlay span {
-    position: absolute;
-    top: 48%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-}
 
 /* --------- 6.7 Pricing Table ---------- */
 
 .pricing-block-content {
     position: relative;
     background: #fff;
-    padding: 100px 0 0 0;
+    padding: 130px 0 0 0;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
     transition: all 0.2s ease-in-out 0s;
     position: relative;
     border: 10px solid #fff;
 }
 
+.pricing-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .pricing-block {
-    margin-top: 120px;
+    margin-top: 160px;
     position: relative;
+    padding: 8px;
 }
 
 .pricing-block img {
     position: absolute;
     width: 70%;
-    top: -115px;
-    left: 60px;
+    top: -150px;
+    left: 75px;
     z-index: 55;
 }
 
