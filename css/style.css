@@ -865,7 +865,7 @@ h6 {
       height: 96%;
     }
   
-    .coffe-7, .coffe-8, .coffe-9, .coffe-10, .coffe-11, .coffe-12, .coffe-2, .coffe-1 {
+    .coffe-7, .coffe-8, .coffe-9, .coffe-10, .coffe-11, .coffe-12, .coffe-2 {
       display: none;
     }
   }
@@ -2481,8 +2481,15 @@ blockquote {
     .background-moc {
         display: none;
     }
-    .coffe-7, .coffe-7, .coffe-1{
+    .coffe-7, .coffe-7 {
         display: none;
+    }
+    .coffe-1{
+        top: 9%;
+        left: 1%;
+        width: 80px;
+        height: 80px;
+        transform: rotate(65deg);
     }
     .coffe-10 {
         top: 9%;
@@ -2492,14 +2499,16 @@ blockquote {
         display: none;
     }
     .coffe-4{
-        top: -6%;
+        top: 42%;
+        width: 80px;
+        height: 80px;
     }
     .coffe-12{
         top: 80%;
         left: 7%;
     }
     .coffe-5{
-        left: 55%;
+        left: 5%;
     }
     .coffe-15{
         left: 11%;
@@ -2507,6 +2516,10 @@ blockquote {
     }
     .coffe-13{
         left: -14%;
+    }
+    .coffe-6{
+        left: 62%;
+        top: 34%;
     }
 
     #wrapper {
