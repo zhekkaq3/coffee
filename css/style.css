@@ -1842,9 +1842,7 @@ blockquote {
         margin: -70px auto 15px;
     }
     
-    .price {
-        padding: 10px 12px;
-    }
+   
 }
 
 @media (max-width: 480px) {
